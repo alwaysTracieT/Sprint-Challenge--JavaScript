@@ -95,12 +95,13 @@ console.log(contactInfo);
 
 // // /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-for (i = 0; i < graduates.length; i++) {
-  if (graduates[i].university.toLowerCase().includes('Uni')) {
+for (let i = 0; i < graduates.length; i++) {
+  if (graduates[i].university.toLowerCase().includes('uni')) {
       uni.push(graduates[i].university);
   };
 };
 console.log(uni);
+
 
 
 
@@ -148,26 +149,31 @@ console.log(lowerCase);
 The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
-
+let lowerPopulation = [];
+lowerPopulation = zooAnimals.filter(function(item){
+    if(item.population < 5){
+      return true;
+    };
+});
 console.log(lowerPopulation);
-
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = [];
-zooAnimals.reduce(function(totalAnmimals, item){
-  return totalAnmimals + item.population;
+let populationTotal = [];
+populationTotal = zooAnimals.reduce(function(totalAnimals, item){
+  return totalAnimals + item.population;
 }, 0);
-
 console.log(populationTotal);
 
+// let ticketPriceTotal = [];
+// ticketPriceTotal = runners.reduce(function(tracker, item){
+//     return tracker + item.donation;
+// }, 0);
+// console.log(ticketPriceTotal);
+// /* 
 
-/* 
+// Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
-Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
-*/
 
