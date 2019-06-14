@@ -36,8 +36,11 @@
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
+// Explanation:
 
-// Explanation: 
+ //ANSWER *****'nestedfunction()' contains a nested function which calls on the parent function (myFunction()) above it, the parent function can then access the needed information from the 
+ // variable "external" which resides in the global scope. *****
+
 
 
 // const external = "I'm outside the function";
